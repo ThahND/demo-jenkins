@@ -3,7 +3,7 @@ pipeline {
     agent any
     stages {
         stage("make build") {
-            sh('npm install && npm run build')
+            sh 'npm install && npm run build'
         }
     }
     post {
