@@ -2,10 +2,8 @@ def isProduction
 pipeline {
     agent any
     stages {
-        stage("pull code") {
-            steps {
-                echo 'Hello World'
-            }
+        stage("make build") {
+            sh('npm install && npm run build')
         }
     }
     post {
